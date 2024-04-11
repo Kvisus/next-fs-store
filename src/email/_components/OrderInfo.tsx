@@ -35,30 +35,30 @@ export default function OrderInfo({
       <Section>
         <Row>
           <Column>
-            <Text className="mb-0 text-gray-500 whitespace-nowrap text-nowrap mr-4">
+            <Text className="mb-0 mr-4 whitespace-nowrap text-nowrap text-gray-500">
               Order ID
             </Text>
-            <Text className="mt-0 mr-4">{order.id}</Text>
+            <Text className="mr-4 mt-0">{order.id}</Text>
           </Column>
           <Column>
-            <Text className="mb-0 text-gray-500 whitespace-nowrap text-nowrap mr-4">
+            <Text className="mb-0 mr-4 whitespace-nowrap text-nowrap text-gray-500">
               Purchased On
             </Text>
-            <Text className="mt-0 mr-4">
+            <Text className="mr-4 mt-0">
               {dateFormatter.format(order.createdAt)}
             </Text>
           </Column>
           <Column>
-            <Text className="mb-0 text-gray-500 whitespace-nowrap text-nowrap mr-4">
+            <Text className="mb-0 mr-4 whitespace-nowrap text-nowrap text-gray-500">
               Price Paid
             </Text>
-            <Text className="mt-0 mr-4">
+            <Text className="mr-4 mt-0">
               {formatCurrency(order.pricePaidInCents / 100)}
             </Text>
           </Column>
         </Row>
       </Section>
-      <Section className="border border-solid border-gray-500 rounded-lg p-4 md:p-6 my-4">
+      <Section className="my-4 rounded-lg border border-solid border-gray-500 p-4 md:p-6">
         <Img
           width="100%"
           alt={product.name}
@@ -66,12 +66,12 @@ export default function OrderInfo({
         />
         <Row className="mt-8">
           <Column className="align-bottom">
-            <Text className="text-lg font-bold m-0 mr-4">{product.name}</Text>
+            <Text className="m-0 mr-4 text-lg font-bold">{product.name}</Text>
           </Column>
           <Column align="right">
             <Button
               href={`${process.env.NEXT_PUBLIC_SERVER_URL}/products/download/${downloadVerificationId}`}
-              className="bg-black text-white px-6 py-4 rounded text-lg"
+              className="rounded bg-black px-6 py-4 text-lg text-white"
             >
               Download
             </Button>
@@ -79,7 +79,7 @@ export default function OrderInfo({
         </Row>
         <Row>
           <Column>
-            <Text className="text-gray-500 mb-0">{product.description}</Text>
+            <Text className="mb-0 text-gray-500">{product.description}</Text>
           </Column>
         </Row>
       </Section>
